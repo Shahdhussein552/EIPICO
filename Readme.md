@@ -239,11 +239,11 @@ Total Regions = DISTINCTCOUNT ( EIPICO[REGION] )
 A full walkthrough of the dashboard is available as a video. Click the image or the link below to watch it:
 
 <p align="center">
-  <a href="EIPICO%20Dashboard.mp4">
+  <a href="EIPICO_-_Trim__online-video-cutter_com__1.mp4">
     <img src="D1.PNG" alt="Watch the project demo video" width="60%" />
   </a>
   <br />
-  <b>▶️ <a href="EIPICO%20Dashboard.mp4">Watch the demo video</a></b>
+  <b>▶️ <a href="EIPICO_-_Trim__online-video-cutter_com__1.mp4">Watch the demo video</a></b>
 </p>
 
 ---
@@ -253,7 +253,7 @@ A full walkthrough of the dashboard is available as a video. Click the image or 
 | File | Description |
 | :--- | :--- |
 | 📊 [**EIPICO Sales Performance.pbix**](EIPICO%20Sales%20Performance.pbix?raw=true) | The Power BI report file. Open it with **Power BI Desktop**. |
-| 🎬 [**EIPICO Dashboard.mp4**](EIPICO%20Dashboard.mp4) | Video walkthrough of the project. |
+| 🎬 [**EIPICO_-_Trim__online-video-cutter_com__1.mp4**](EIPICO_-_Trim__online-video-cutter_com__1.mp4) | Video walkthrough of the project. |
 
 ---
 
@@ -263,7 +263,7 @@ A full walkthrough of the dashboard is available as a video. Click the image or 
 📦 EIPICO-Sales-Performance-Dashboard
  ┣ 📄 README.md
  ┣ 📊 EIPICO Sales Performance.pbix
- ┣ 🎬 EIPICO Dashboard.mp4
+ ┣ 🎬 EIPICO_-_Trim__online-video-cutter_com__1.mp4
  ┣ 🖼️ D1.PNG  (Home)
  ┣ 🖼️ D2.PNG  (Sales Overview)
  ┣ 🖼️ D3.PNG  (Product Analysis)
