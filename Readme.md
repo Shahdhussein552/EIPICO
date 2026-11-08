@@ -31,7 +31,7 @@ The project transforms **135,666 transactional sales records** into structured, 
 | **Domain** | Pharmaceutical Commercial & Distribution Analytics |
 | **Sales Period** | 01 Jan 2025 – 31 Mar 2025 (Q1 2025) |
 | **Product Scope** | 47 Commercial Pharmaceutical Products across 7 Therapeutic Lines |
-| **Records** | 135,666 transaction lines (42,212 unique accounts/customers) |
+| **Records** | 135,666 transaction lines (43K customer accounts) |
 | **Dashboard Pages** | 4 (Cover Page, Sales Overview, Product Analysis, Geographic Coverage) |
 | **Main Tool** | Microsoft Power BI Desktop |
 | **Data Preparation** | Power Query (schema validation, custom key formulation, type casting) |
@@ -48,28 +48,28 @@ The project transforms **135,666 transactional sales records** into structured, 
   <img src="D1.PNG" alt="Cover Page" width="90%" />
 </p>
 
-> *The landing view featuring branding, project title, author credentials, and interactive page navigation.*
+> *The landing view featuring EIPICO branding, project title, author credit (Shahd Hussein), and direct navigation links to all report pages.*
 
 ### 2. Sales Overview
 <p align="center">
   <img src="D2.PNG" alt="Sales Overview" width="90%" />
 </p>
 
-> *High-level executive cockpit: Total Revenue, Units Sold, Average Price, monthly sales trajectory (Jan–Mar), and channel distribution split (Store, Retail, Tender).*
+> *High-level executive cockpit: Total Sales ($108.91M), Total Units (3M), AVG Sales Per Unit ($802.78), Total Customers (43K), Sales by Region, Gauge Milestone, Monthly Trend (Jan–Mar), and Sales Type split (Store: 67.85%, Retail: 31.73%, Tender).*
 
 ### 3. Product Analysis
 <p align="center">
   <img src="D3.PNG" alt="Product Analysis" width="90%" />
 </p>
 
-> *Therapeutic line performance comparison, top-revenue generating brands, price-to-volume velocity, and granular SKU-level performance metrics.*
+> *Portfolio-focused view: Total Products (47), Average P Price (49.89), Sales Value by Line Name, Top Products by Sales Value (led by Lamifen cr. 15gm at 15.6M), Units by Product, and Sales Value by Sales Type.*
 
 ### 4. Geographic Coverage
 <p align="center">
   <img src="D4.PNG" alt="Geographic Coverage" width="90%" />
 </p>
 
-> *Regional breakdown across 7 administrative zones, top 10 commercial micro-territories, distributor contribution shares, and key healthcare account concentration.*
+> *Territory and distribution analysis: Total Lines (7), Total Distributors (15), Total Customers (43K), Total Territories (46), Total Regions (7), Regional rankings, Territory Treemap, Line volume/value comparison, and Distributor share donut chart (Stores, POS, Direct, Ibn Sina).*
 
 ---
 
@@ -124,8 +124,8 @@ The dataset captures transactional commercial pharmaceutical activity during the
 | **`Line Name`** | Text | Therapeutic sales line (Line 1, Line 2, Line 3, Line 4, Line 5, CVM, Tender). |
 | **`EGPI Product Name`** | Text | Commercial pharmaceutical brand/SKU name (47 unique formulations). |
 | **`SALES UNITS`** | Decimal | Quantity of packs/units sold in the transaction. |
-| **`P Price`** | Decimal | Pharmacy unit purchase price in EGP. |
-| **`SALES VALUE`** | Decimal | Gross sales revenue in EGP (`Quantity × Unit Price`). |
+| **`P Price`** | Decimal | Pharmacy unit purchase price in EGP / USD equivalent. |
+| **`SALES VALUE`** | Decimal | Gross sales revenue (`Quantity × Unit Price`). |
 | **`SALES TYPE`** | Text | Classification of sale (`RETAIL`, `STORE`, `Tender`). |
 | **`key`** | Text | Unique relational surrogate key combining date, region, and product. |
 
@@ -136,7 +136,7 @@ The dataset captures transactional commercial pharmaceutical activity during the
 **Power Query** was utilized to clean, transform, and structure the data:
 
 1. **Schema Standardization & Type Casting:** Converted financial values (`SALES VALUE`, `P Price`) into decimal currency, standardized unit quantities, and structured timestamps to calendar month-ends.
-2. **Data Cleansing:** Imputed missing values for non-coded institutional stores and standardized naming conventions across bilingual pharmacy and hospital records.
+2. **Data Cleansing:** Standardized naming conventions across bilingual pharmacy and hospital records, verifying non-coded institutional store transactions.
 3. **Surrogate Key Verification:** Validated compound keys (`key`) linking composite dimensional attributes (Period + Region + Product) for time and geographic integrity.
 4. **Hierarchical Modeling:** Established natural drill-down paths from **Region ➔ Territory ➔ Customer** and from **Line Name ➔ Product Name**.
 
@@ -146,20 +146,20 @@ The dataset captures transactional commercial pharmaceutical activity during the
 
 | # | Page | Purpose |
 | :-: | :--- | :--- |
-| 1 | **Cover Page** | Executive welcome screen with project metadata, branding, and direct navigation links. |
-| 2 | **Sales Overview** | Macro commercial KPIs (Revenue, Packs, Average Price, Accounts), monthly growth trend, and sales channel contribution. |
-| 3 | **Product Analysis** | Therapeutic line comparison, top revenue-generating brands, unit volume ranking, and price-to-volume matrix. |
-| 4 | **Geographic Coverage** | Regional revenue rankings, micro-territory deep dive (46 territories), distributor channel shares, and key account tables. |
+| 1 | **Cover Page** | Executive welcome screen with EIPICO branding, metadata, author credentials, and direct page navigation links. |
+| 2 | **Sales Overview** | Macro commercial KPIs (Total Sales, Total Units, AVG Sales Per Unit, Customers), target gauge, monthly trend, and sales channel contribution. |
+| 3 | **Product Analysis** | Therapeutic line comparison, top revenue-generating brands, unit volume ranking, and price-to-volume metrics. |
+| 4 | **Geographic Coverage** | Regional revenue rankings, micro-territory treemap (46 territories), distributor channel shares, and line-level comparisons. |
 
 ---
 
 ## ✨ Key Features
 
-- 🧭 **Seamless Navigation:** Integrated action buttons, page links, and interactive reset filters on every view.
-- 🎛️ **Synchronized Slicers:** Dynamic filtering by Month, Therapeutic Line, Region, Territory, and Distributor with synchronized cross-highlighting.
-- 🎨 **Corporate Pharma Branding:** Clean, medical-grade color palette balancing deep navy, teal, and slate gray for optimal readability.
-- 📊 **Multivariate Visualizations:** Clustered bar charts, 100% stacked channel charts, monthly trend lines, and KPI cards with conditional alerts.
-- 🧮 **Optimized DAX Measures:** Centralized measures table for dynamic volume, pricing, customer reach, and revenue aggregations.
+- 🧭 **Seamless Navigation:** Top header navigation buttons (`Sales Overview`, `Product Analysis`, `Geographic Coverage`), Home button, and Reset Slicers action on every view.
+- 🎛️ **Interactive Slicers:** Synchronized filter pane and visual cross-highlighting across Region, Territory, Line, and Month.
+- 🎨 **Corporate Pharma Branding:** Medical-grade blue palette customized with EIPICO corporate identity.
+- 📊 **Multivariate Visualizations:** Horizontal bar charts, Treemaps, Donut charts, Gauge targets, Monthly curve lines, and metric KPI cards.
+- 🧮 **Optimized DAX Measures:** Dynamic volume, pricing, customer reach, and revenue aggregations.
 
 ---
 
@@ -167,39 +167,39 @@ The dataset captures transactional commercial pharmaceutical activity during the
 
 | KPI | Value | Description |
 | :--- | :---: | :--- |
-| **Total Sales Value (Revenue)** | **EGP 108.91M** | Total gross commercial revenue generated in Q1 2025 |
-| **Total Units Sold** | **3.17M Packs** | Cumulative quantity of pharmaceutical units distributed |
-| **Average Unit Price (Listed)** | **EGP 49.89** | Arithmetic mean of pharmacy purchasing prices |
-| **Weighted Average Realized Price** | **EGP 34.33** | Actual realized price per unit sold across the entire portfolio |
-| **Active Customer Accounts** | **42,212 Accounts** | Distinct pharmacies, hospitals, and medical centers billed |
+| **Total Sales Value (Revenue)** | **$108.91M** | Total gross commercial revenue generated in Q1 2025 |
+| **Total Units Sold** | **3M Units** | Cumulative quantity of pharmaceutical packs distributed |
+| **Average Unit Price (P Price)** | **49.89** | Arithmetic mean of catalog pharmacy purchase prices |
+| **AVG Sales Per Unit** | **$802.78** | Average transaction sales realization per billing entry |
+| **Total Customers** | **43K Accounts** | Distinct pharmacies, hospitals, and procurement accounts billed |
 | **Therapeutic Sales Lines** | **7 Lines** | Core product lines operating across commercial divisions |
 | **Nationwide Territories** | **46 Territories** | Field coverage across all 7 operational regions in Egypt |
+| **Distribution Partners** | **15 Channels** | National distributors, direct supplies, and store networks |
 
 ---
 
 ## 💡 Key Insights
 
 ### 📈 Commercial Sales & Channel Dynamics
-- **Total Revenue:** Reached **EGP 108.91M** across Q1 2025, with peak sales observed in **February (EGP 44.04M / 1.22M units)** compared to **January (EGP 32.76M)** and **March (EGP 32.12M)**.
-- **Channel Contribution:** Institutional warehouse stores (**STORE**) account for **EGP 73.90M (~67.8%)** of total sales value, direct community retail pharmacies (**RETAIL**) generate **EGP 34.55M (~31.7%)**, while Institutional Tenders contribute **EGP 460.5K**.
+- **Total Revenue:** Reached **$108.91M** across Q1 2025, peaking in **February (~$44M)** compared to **January (~$33M)** and **March (~$32M)**.
+- **Channel Contribution:** Institutional warehouse stores (**STORE**) account for **$73.90M (67.85%)** of total sales value, direct community retail pharmacies (**RETAIL**) generate **$34.55M (31.73%)**, while Institutional Tenders represent the remaining balance.
 
 ### 💊 Therapeutic Lines & Product Portfolio
-- **Core Drivers:** **Line 2** dominates the portfolio, generating **EGP 36.79M (1.60M units)**, followed by **Line 1** at **EGP 24.19M (538.9K units)**. Together, these two lines account for **56% of total company revenue**.
+- **Core Drivers:** **Line 2** dominates the portfolio, generating **$37M**, followed by **Line 1** at **$24M**, **Line 4** at **$14M**, **Line 3** at **$13M**, and **CVM** at **$12M**.
 - **Top Brand Performers:**
-  - **Lamifen Cream 15gm** is the company's leading revenue and volume engine: **EGP 15.57M** from **1.33M units sold**.
-  - **Flacort 30mg 20 tab.** ranks second in value at **EGP 10.55M** (93.3K units) due to higher unit value.
-  - **Aqua Plus 100ml** generated **EGP 8.96M** (306.3K units).
-  - **Perfectodil 5%** contributed **EGP 8.77M** (143.6K units).
-  - **Lamifen 250 14 Tab.** achieved **EGP 7.00M** (96.1K units).
-- **Price vs. Volume Insights:** High revenue in dermatological anti-fungals (*Lamifen*) is volume-driven, whereas corticosteroids (*Flacort*) and cardiovascular agents (*Vildabetes*) are margin/value-driven.
+  - **Lamifen cr. 15gm** is the leading revenue and volume engine: **$15.6M** in revenue and **1.33M units sold**.
+  - **Flacort 30mg 20 tab.** ranks second in value at **$10.5M** (0.09M units).
+  - **Aqua plus 100ml** generated **$9.0M** (0.31M units).
+  - **Perfectodil 5%** contributed **$8.8M** (0.14M units).
+  - **Lamifen 250 14 Tab.** achieved **$7.0M** (0.10M units).
 
 ### 🌍 Regional Penetration & Distributors
 - **Regional Performance:** 
-  - **Alex 2** leads nationwide sales with **EGP 22.88M (562.9K units)**.
-  - **Upper Egypt (UE)** closely follows at **EGP 20.74M (601.7K units)**, demonstrating deep southern market penetration.
-  - **Alex 1** ranks third at **EGP 18.43M (537.0K units)**, followed by **Giza (EGP 12.84M)**, **Delta 2 (EGP 12.68M)**, **Delta 1 (EGP 10.74M)**, and **Cairo (EGP 10.60M)**.
-- **Top Territories:** The leading micro-territories by commercial revenue are **Gharbia III (EGP 6.06M)**, **Gharbia I (EGP 3.93M)**, **Behera I (EGP 3.69M)**, **Alex I (EGP 3.38M)**, and **Dakahlia I (EGP 3.34M)**.
-- **Distributor Network:** **STORES** and Point-of-Sale (**POS** at **EGP 16.46M**) represent the primary supply path, complemented by **Direct Pharmacy Accounts (EGP 7.98M)**, **Ibn Sina Pharma (EGP 3.62M)**, and **Egyptian Co. / EGY (EGP 2.44M)**.
+  - **Alex 2** leads nationwide sales with **$22.9M**.
+  - **Upper Egypt (UE)** closely follows at **$20.7M**, demonstrating deep southern market penetration.
+  - **Alex 1** ranks third at **$18.4M**, followed by **Giza ($12.8M)**, **Delta 2 ($12.7M)**, **Delta 1 ($10.7M)**, and **Cairo ($10.6M)**.
+- **Top Territories:** The leading micro-territories by commercial revenue are **Gharbia III**, **Gharbia I**, **Behera I**, **Alex I**, and **Dakahlia I**.
+- **Distributor Network:** **STORES** accounts for **$73.9M (67.85%)**, followed by Point-of-Sale (**POS** at **$16.46M / 15.11%**), **DIRECT Accounts ($7.98M / 7.33%)**, and **IBN SINA Pharma**.
 
 ---
 
@@ -209,39 +209,39 @@ The foundational DAX logic powering the report's metrics:
 
 ```DAX
 // 1. Total Commercial Revenue
-Total Sales Value = 
+Total Sales = 
 SUM ( 'Q1 Sales Performance'[SALES VALUE] )
 
 // 2. Total Volume Sold (Packs)
-Total Sales Units = 
+Total Units = 
 SUM ( 'Q1 Sales Performance'[SALES UNITS] )
 
-// 3. Average Unit Price (Catalog Average)
-Average Unit Price = 
+// 3. Average Price
+Average of P Price = 
 AVERAGE ( 'Q1 Sales Performance'[P Price] )
 
-// 4. Weighted Realized Unit Price
-Weighted Realized Price = 
-DIVIDE ( [Total Sales Value], [Total Sales Units], 0 )
+// 4. Average Sales Realization Per Unit
+AVG Sales Per Unit = 
+DIVIDE ( [Total Sales], [Total Units], 0 )
 
-// 5. Total Billed Accounts
-Total Active Customers = 
+// 5. Total Customer Accounts
+Total Customers = 
 DISTINCTCOUNT ( 'Q1 Sales Performance'[CUSTOMER CODE] )
 
-// 6. Total Unique Products
-Active Products Count = 
-DISTINCTCOUNT ( 'Q1 Sales Performance'[EGPI Product Name] )
+// 6. Active Lines Count
+Total Lines = 
+DISTINCTCOUNT ( 'Q1 Sales Performance'[Line Name] )
 
 // 7. Store Sales Value
 Store Sales Value = 
 CALCULATE (
-    [Total Sales Value],
+    [Total Sales],
     'Q1 Sales Performance'[SALES TYPE] = "STORE"
 )
 
 // 8. Retail Sales Value
 Retail Sales Value = 
 CALCULATE (
-    [Total Sales Value],
+    [Total Sales],
     'Q1 Sales Performance'[SALES TYPE] = "RETAIL"
 )
