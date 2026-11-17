@@ -18,6 +18,8 @@
 
 ---
 
+<a id="project-overview"></a>
+
 ## 📌 Project Overview
 
 The **EIPICO Sales Performance Dashboard** is an interactive Power BI project built to explore pharmaceutical sales across product lines, individual medicines, distributors, sales channels, and geographic coverage.
@@ -43,32 +45,34 @@ The project transforms raw sales records into visual insights, helping decision-
 
 ---
 
+<a id="dashboard-preview"></a>
+
 ## 📸 Dashboard Preview
 
 ### 1. Cover / Home Page
 <p align="center">
-  <img src="D1.PNG" alt="Home Page" width="90%" />
+  <img src="https://shahdhussein552.github.io/EIPICO/D1.PNG" alt="Home Page" width="90%" />
 </p>
 
 > *The landing page with project title, presenter credit, company website link, and navigation buttons to every report page.*
 
 ### 2. Sales Overview
 <p align="center">
-  <img src="D2.PNG" alt="Sales Overview" width="90%" />
+  <img src="https://shahdhussein552.github.io/EIPICO/D2.PNG" alt="Sales Overview" width="90%" />
 </p>
 
 > *High-level KPIs (Total Sales, Total Units, Average Sales, Total Customers), sales by region, monthly trend, sales type split, and a gauge tracking total sales against a target range.*
 
 ### 3. Product Analysis
 <p align="center">
-  <img src="D3.PNG" alt="Product Analysis" width="90%" />
+  <img src="https://shahdhussein552.github.io/EIPICO/D3.PNG" alt="Product Analysis" width="90%" />
 </p>
 
 > *Sales value by product line, top medicines by value and by units sold, and sales by sales type.*
 
 ### 4. Geographic Coverage
 <p align="center">
-  <img src="D4.PNG" alt="Geographic Coverage" width="90%" />
+  <img src="https://shahdhussein552.github.io/EIPICO/D4.PNG" alt="Geographic Coverage" width="90%" />
 </p>
 
 > *Coverage view: sales by region, sales by territory (treemap), sales and units by product line, and sales share by distributor.*
@@ -76,24 +80,26 @@ The project transforms raw sales records into visual insights, helping decision-
 ---
 
 ## 📑 Table of Contents
-- [Project Overview](#-project-overview)
-- [Dashboard Preview](#-dashboard-preview)
-- [Business Objectives](#-business-objectives)
-- [Dataset](#-dataset)
-- [Data Preparation](#-data-preparation)
-- [Dashboard Pages](#-dashboard-pages)
-- [Key Features](#-key-features)
-- [Key Performance Indicators](#-key-performance-indicators)
-- [Key Insights](#-key-insights)
-- [DAX Measures](#-dax-measures)
-- [Project Demonstration](#-project-demonstration)
-- [Download Dashboard](#-download-dashboard)
-- [Repository Structure](#-repository-structure)
-- [Limitations & Considerations](#-limitations--considerations)
-- [About the Author](#-about-the-author)
-- [Feedback](#-feedback)
+- [Project Overview](#project-overview)
+- [Dashboard Preview](#dashboard-preview)
+- [Business Objectives](#business-objectives)
+- [Dataset](#dataset)
+- [Data Preparation](#data-preparation)
+- [Dashboard Pages](#dashboard-pages)
+- [Key Features](#key-features)
+- [Key Performance Indicators](#key-performance-indicators)
+- [Key Insights](#key-insights)
+- [DAX Measures](#dax-measures)
+- [Project Demonstration](#project-demonstration)
+- [Download Dashboard](#download-dashboard)
+- [Repository Structure](#repository-structure)
+- [Limitations & Considerations](#limitations)
+- [About the Author](#about-the-author)
+- [Feedback](#feedback)
 
 ---
+
+<a id="business-objectives"></a>
 
 ## 🎯 Business Objectives
 
@@ -108,11 +114,13 @@ The project explores the following analytical questions:
 
 ---
 
+<a id="dataset"></a>
+
 ## 📂 Dataset
 
 The data model is simple: one flat sales table plus a dedicated table that holds all DAX measures.
 
-> 📥 **Source data file:** [**sales performnce.xlsx**](sales%20performnce.xlsx?raw=true) (sheet `Q1 Sales Performance`, **135,666 rows × 15 columns**), the raw Excel sales file used to build this dashboard. Make sure the file is uploaded to the root of the repository next to this README, otherwise the link will not work.
+> 📥 **Source data file:** [**sales performnce.xlsx**](https://shahdhussein552.github.io/EIPICO/sales%20performnce.xlsx) (sheet `Q1 Sales Performance`, **135,666 rows × 15 columns**), the raw Excel sales file used to build this dashboard.
 
 **Columns in the raw Excel file:** `Month`, `BU`, `DISTRIBUTOR`, `CUSTOMER CODE`, `CUSTOMER NAME`, `Territory`, `REGION`, `Line Name`, `EGPI Product Name`, `SALES UNITS`, `P Price`, `SALES VALUE`, `SALES TYPE`, `key`, `Column1`.
 
@@ -142,6 +150,8 @@ The data model is simple: one flat sales table plus a dedicated table that holds
 
 ---
 
+<a id="data-preparation"></a>
+
 ## 🧹 Data Preparation
 
 **Power Query** was used to prepare the dataset before reporting:
@@ -152,6 +162,8 @@ The data model is simple: one flat sales table plus a dedicated table that holds
 4. **Navigation & Slicers:** Added slicer fields (Month, Region, Territory, Distributor, Line, Product, Customer, Sales Type) to support the filter pane on every page.
 
 ---
+
+<a id="dashboard-pages"></a>
 
 ## 🗂️ Dashboard Pages
 
@@ -164,6 +176,8 @@ The data model is simple: one flat sales table plus a dedicated table that holds
 
 ---
 
+<a id="key-features"></a>
+
 ## ✨ Key Features
 
 - 🧭 **Custom navigation:** page buttons and a home button on every page.
@@ -173,6 +187,8 @@ The data model is simple: one flat sales table plus a dedicated table that holds
 - 🧮 **Explicit DAX measures** stored in a dedicated measures table.
 
 ---
+
+<a id="key-performance-indicators"></a>
 
 ## 📈 Key Performance Indicators
 
@@ -190,6 +206,8 @@ The data model is simple: one flat sales table plus a dedicated table that holds
 | **Total Regions** | 7 |
 
 ---
+
+<a id="key-insights"></a>
 
 ## 💡 Key Insights
 
@@ -214,6 +232,8 @@ The data model is simple: one flat sales table plus a dedicated table that holds
 - The second-largest distributor accounts for **$16.46M (15.11%)**, and the next one for about **$7.98M**. The remaining distributors each hold a small share.
 
 ---
+
+<a id="dax-measures"></a>
 
 ## 🧮 DAX Measures
 
@@ -241,29 +261,35 @@ Total Regions = DISTINCTCOUNT ( EIPICO[REGION] )
 
 ---
 
+<a id="project-demonstration"></a>
+
 ## 🎬 Project Demonstration
 
 A full walkthrough of the dashboard is available as a video. Click the image or the link below to watch it:
 
 <p align="center">
-  <a href="EIPICO.mp4">
-    <img src="D1.PNG" alt="Watch the project demo video" width="60%" />
+  <a href="https://shahdhussein552.github.io/EIPICO/EIPICO.mp4">
+    <img src="https://shahdhussein552.github.io/EIPICO/D1.PNG" alt="Watch the project demo video" width="60%" />
   </a>
   <br />
-  <b>▶️ <a href="EIPICO.mp4">Watch the demo video</a></b>
+  <b>▶️ <a href="https://shahdhussein552.github.io/EIPICO/EIPICO.mp4">Watch the demo video</a></b>
 </p>
 
 ---
+
+<a id="download-dashboard"></a>
 
 ## ⬇️ Download Dashboard
 
 | File | Description |
 | :--- | :--- |
-| 📊 [**EIPICO Sales Performance.pbix**](EIPICO%20Sales%20Performance.pbix?raw=true) | The Power BI report file. Open it with **Power BI Desktop**. |
-| 📥 [**sales performnce.xlsx**](sales%20performnce.xlsx?raw=true) | The raw Excel dataset behind the dashboard. |
-| 🎬 [**EIPICO.mp4**](EIPICO.mp4) | Video walkthrough of the project. |
+| 📊 [**EIPICO Sales Performance.pbix**](https://shahdhussein552.github.io/EIPICO/EIPICO%20Sales%20Performance.pbix) | The Power BI report file. Open it with **Power BI Desktop**. |
+| 📥 [**sales performnce.xlsx**](https://shahdhussein552.github.io/EIPICO/sales%20performnce.xlsx) | The raw Excel dataset behind the dashboard. |
+| 🎬 [**EIPICO.mp4**](https://shahdhussein552.github.io/EIPICO/EIPICO.mp4) | Video walkthrough of the project. |
 
 ---
+
+<a id="repository-structure"></a>
 
 ## 🗃️ Repository Structure
 
@@ -281,6 +307,8 @@ A full walkthrough of the dashboard is available as a video. Click the image or 
 
 ---
 
+<a id="limitations"></a>
+
 ## ⚠️ Limitations & Considerations
 
 - This is a **descriptive analysis**; it does not include forecasting or statistical testing.
@@ -292,6 +320,8 @@ A full walkthrough of the dashboard is available as a video. Click the image or 
 - Revenue is concentrated in a few lines and products (Line 2 and Line 1, and Lamifen cr. 15gm), so results are sensitive to those.
 
 ---
+
+<a id="about-the-author"></a>
 
 ## 👤 About the Author
 
@@ -308,6 +338,8 @@ A full walkthrough of the dashboard is available as a video. Click the image or 
 I build interactive dashboards that turn raw data into clear business insights. This project was created to practice data modeling, DAX, and dashboard storytelling in Power BI.
 
 ---
+
+<a id="feedback"></a>
 
 ## 💬 Feedback
 
