@@ -112,7 +112,11 @@ The project explores the following analytical questions:
 
 The data model is simple: one flat sales table plus a dedicated table that holds all DAX measures.
 
-> 📥 **Source data file:** [**sales_performnce.xlsx**](sales_performnce.xlsx?raw=true), the raw Excel sales file used to build this dashboard.
+> 📥 **Source data file:** [**sales performnce.xlsx**](sales%20performnce.xlsx?raw=true) (sheet `Q1 Sales Performance`, **135,666 rows × 15 columns**), the raw Excel sales file used to build this dashboard. Make sure the file is uploaded to the root of the repository next to this README, otherwise the link will not work.
+
+**Columns in the raw Excel file:** `Month`, `BU`, `DISTRIBUTOR`, `CUSTOMER CODE`, `CUSTOMER NAME`, `Territory`, `REGION`, `Line Name`, `EGPI Product Name`, `SALES UNITS`, `P Price`, `SALES VALUE`, `SALES TYPE`, `key`, `Column1`.
+
+> In Power BI, `EGPI Product Name` is used as `EIPICO Product Name`, and `BU`, `CUSTOMER CODE`, and `Column1` are not used in the report.
 
 ### Dataset Tables
 
@@ -256,7 +260,7 @@ A full walkthrough of the dashboard is available as a video. Click the image or 
 | File | Description |
 | :--- | :--- |
 | 📊 [**EIPICO Sales Performance.pbix**](EIPICO%20Sales%20Performance.pbix?raw=true) | The Power BI report file. Open it with **Power BI Desktop**. |
-| 📥 [**sales_performnce.xlsx**](sales_performnce.xlsx?raw=true) | The raw Excel dataset behind the dashboard. |
+| 📥 [**sales performnce.xlsx**](sales%20performnce.xlsx?raw=true) | The raw Excel dataset behind the dashboard. |
 | 🎬 [**EIPICO.mp4**](EIPICO.mp4) | Video walkthrough of the project. |
 
 ---
@@ -267,7 +271,7 @@ A full walkthrough of the dashboard is available as a video. Click the image or 
 📦 EIPICO-Sales-Performance-Dashboard
  ┣ 📄 README.md
  ┣ 📊 EIPICO Sales Performance.pbix
- ┣ 📥 sales_performnce.xlsx
+ ┣ 📥 sales performnce.xlsx
  ┣ 🎬 EIPICO.mp4
  ┣ 🖼️ D1.PNG  (Home)
  ┣ 🖼️ D2.PNG  (Sales Overview)
