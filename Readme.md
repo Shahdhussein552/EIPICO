@@ -1,11 +1,12 @@
 <div align="center">
 
-# 💊 EIPICO Sales Performance Dashboard | Power BI
-### Turning Pharmaceutical Sales Data into Business Insights
+<h1>💊 EIPICO Sales Performance Dashboard | Power BI</h1>
 
-[![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)](https://powerbi.microsoft.com/)
-[![DAX](https://img.shields.io/badge/DAX-Data%20Analysis%20Expressions-0078D4?style=for-the-badge)](https://learn.microsoft.com/en-us/dax/)
-[![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)](#)
+<h3>Turning Pharmaceutical Sales Data into Business Insights</h3>
+
+<a href="https://powerbi.microsoft.com/"><img src="https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" alt="Power BI" /></a>
+<a href="https://learn.microsoft.com/en-us/dax/"><img src="https://img.shields.io/badge/DAX-Data%20Analysis%20Expressions-0078D4?style=for-the-badge" alt="DAX" /></a>
+<img src="https://img.shields.io/badge/Status-Completed-success?style=for-the-badge" alt="Status" />
 
 <p align="center">
   <b>An interactive Business Intelligence project exploring EIPICO's pharmaceutical sales performance across product lines, distributors, sales channels, and geographic regions and territories in Egypt.</b>
@@ -110,6 +111,8 @@ The project explores the following analytical questions:
 ## 📂 Dataset
 
 The data model is simple: one flat sales table plus a dedicated table that holds all DAX measures.
+
+> 📥 **Source data file:** [**sales_performnce.xlsx**](sales_performnce.xlsx?raw=true), the raw Excel sales file used to build this dashboard.
 
 ### Dataset Tables
 
@@ -253,6 +256,7 @@ A full walkthrough of the dashboard is available as a video. Click the image or 
 | File | Description |
 | :--- | :--- |
 | 📊 [**EIPICO Sales Performance.pbix**](EIPICO%20Sales%20Performance.pbix?raw=true) | The Power BI report file. Open it with **Power BI Desktop**. |
+| 📥 [**sales_performnce.xlsx**](sales_performnce.xlsx?raw=true) | The raw Excel dataset behind the dashboard. |
 | 🎬 [**EIPICO.mp4**](EIPICO.mp4) | Video walkthrough of the project. |
 
 ---
@@ -263,6 +267,7 @@ A full walkthrough of the dashboard is available as a video. Click the image or 
 📦 EIPICO-Sales-Performance-Dashboard
  ┣ 📄 README.md
  ┣ 📊 EIPICO Sales Performance.pbix
+ ┣ 📥 sales_performnce.xlsx
  ┣ 🎬 EIPICO.mp4
  ┣ 🖼️ D1.PNG  (Home)
  ┣ 🖼️ D2.PNG  (Sales Overview)
@@ -288,10 +293,11 @@ A full walkthrough of the dashboard is available as a video. Click the image or 
 
 <div align="center">
 
-**Shahd Hussein**
-*Data Analyst | Power BI*
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/feed/)
+<b>Shahd Hussein</b>
+<br />
+<i>Data Analyst | Power BI</i>
+<br /><br />
+<a href="https://www.linkedin.com/feed/"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
 
 </div>
 
@@ -309,6 +315,6 @@ Feedback and suggestions are welcome. If you found this project useful:
 
 <div align="center">
 
-**Thank you for visiting! 💊**
+<b>Thank you for visiting! 💊</b>
 
 </div>
